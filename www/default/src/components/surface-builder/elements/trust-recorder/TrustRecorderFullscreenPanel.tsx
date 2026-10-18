@@ -12,6 +12,7 @@ import {
   type CustomResource,
   type TrustRecorderEntry,
 } from './definition';
+import TrustRecorderLastOutcome from '../../../trust-recorder/TrustRecorderLastOutcome';
 import TrustRecorderEntryForm from './TrustRecorderEntryForm';
 
 function seedInitial(config: any): TrustRecorderEntry[] {
@@ -261,6 +262,7 @@ const TrustRecorderFullscreenPanel: React.FC<ConfigPanelProps> = ({
             Only a maximum of {TRUST_RECORDER_ENTRIES_MAX} records allowed per Trust Recorder.
           </strong>
         </div>
+        <TrustRecorderLastOutcome className="mt-3" />
       </div>
 
       <div className="card shadow mb-4">

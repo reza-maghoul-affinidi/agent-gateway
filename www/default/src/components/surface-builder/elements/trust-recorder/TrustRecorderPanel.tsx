@@ -5,6 +5,7 @@ import AddResourceLink from '../../../shared/AddResourceLink';
 import InfoBanner from '../../../shared/InfoBanner';
 import type { ConfigPanelProps } from '../types';
 import { deepLinks } from '../../../../utils/deepLinks';
+import TrustRecorderLastOutcome from '../../../trust-recorder/TrustRecorderLastOutcome';
 import { readEntries, TRUST_RECORDER_ENTRIES_MAX } from './definition';
 
 const PREVIEW_MAX = 5;
@@ -126,6 +127,8 @@ const TrustRecorderPanel: React.FC<ConfigPanelProps> = ({ config, openFullscreen
           <dd style={{ fontStyle: 'italic' }}>{context.example}</dd>
         </dl>
       </InfoBanner>
+
+      <TrustRecorderLastOutcome className="config-section" />
 
       <div className="config-section">
         {entries.length === 0 ? renderEmptyState() : renderEntriesList()}
