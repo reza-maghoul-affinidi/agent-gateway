@@ -51,6 +51,7 @@ pub struct IdentityApiState {
     pub resolved_surface_cache: Arc<crate::surfaces::ResolvedSurfaceCache>,
     pub surface_template_store: Option<Arc<crate::surface_templates::FileSystemSurfaceTemplateStore>>,
     pub event_hook: Option<Arc<crate::event_hook::EventHook>>,
+    pub mediator_directory: Option<Arc<crate::event_hook::MediatorDirectory>>,
 
     // DID:webvh support (optional, behind feature gate)
     #[cfg(feature = "didwebvh")]
